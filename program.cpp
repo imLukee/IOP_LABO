@@ -8,9 +8,16 @@ int silnia(int n){
     return output;
 }
 
+bool sprawdzUjemna(int x){
+    return x < 0;
+}
+
 int main(int argc, char* argv[]){
     int x = 0;
     std::cin >> x;
-    std::cout << silnia(x) << std::endl;
+    if (sprawdzUjemna(x) == false)
+        std::cout << x << std::endl;
+    else 
+        std::cout << "Wpisana wartosc jest ujemna" << std::endl;
     return 0;
 }
